@@ -13,11 +13,12 @@ from typing import Any, Optional, Tuple
 from ..utils.path_manager import get_src_dir
 
 src_dir = get_src_dir()
-lcb_runner_path = src_dir / "benchmark_repo" / "LiveCodeBench" / "lcb_runner"
-lcb_runner_path_str = str(lcb_runner_path)
+# Parent of the `lcb_runner` package so `import lcb_runner.*` works.
+lcb_repo_root = src_dir / "benchmark_repo" / "LiveCodeBench"
+lcb_repo_root_str = str(lcb_repo_root)
 
-if lcb_runner_path_str not in sys.path:
-    sys.path.insert(0, lcb_runner_path_str)
+if lcb_repo_root_str not in sys.path:
+    sys.path.insert(0, lcb_repo_root_str)
 
 from lcb_runner.evaluation.testing_util import (
     import_string,

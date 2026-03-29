@@ -16,13 +16,14 @@ def _restore_os_module():
 
 def _setup_lcb_path():
     src_dir = get_src_dir()
-    lcb_runner_path = src_dir / "benchmark_repo" / "LiveCodeBench" / "lcb_runner"
-    lcb_runner_path_str = str(lcb_runner_path)
+    # Must be the parent of the `lcb_runner` package dir so `import lcb_runner.*` resolves.
+    lcb_repo_root = src_dir / "benchmark_repo" / "LiveCodeBench"
+    lcb_repo_root_str = str(lcb_repo_root)
 
-    if lcb_runner_path_str not in sys.path:
-        sys.path.insert(0, lcb_runner_path_str)
+    if lcb_repo_root_str not in sys.path:
+        sys.path.insert(0, lcb_repo_root_str)
 
-    return lcb_runner_path
+    return lcb_repo_root
 
 
 _lcb_path = _setup_lcb_path()
@@ -33,7 +34,7 @@ try:
 except ImportError as e:
     raise ImportError(
         f"Failed to import LiveCodeBench evaluation modules. "
-        f"Make sure LiveCodeBench is properly installed at {_lcb_path}. "
+        f"Ensure `lcb_runner` exists under {_lcb_path / 'lcb_runner'}. "
         f"Original error: {e}"
     )
 

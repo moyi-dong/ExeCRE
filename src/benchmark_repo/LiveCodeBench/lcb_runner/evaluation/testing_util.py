@@ -229,12 +229,18 @@ def grade_call_based(
     compiled_sol = compile_code(code, timeout)
 
     if compiled_sol is None:
-        return
+        return [-4], {
+            "error_code": -4,
+            "error_message": "Compilation failed",
+        }
 
     method = get_function(compiled_sol, fn_name)
 
     if method is None:
-        return
+        return [-4], {
+            "error_code": -4,
+            "error_message": f"Function {fn_name} not found",
+        }
 
     all_inputs = [
         [json.loads(line) for line in inputs.split("\n")] for inputs in all_inputs
@@ -315,12 +321,18 @@ def grade_stdio(
 
     compiled_sol = compile_code(code, timeout)
     if compiled_sol is None:
-        return
+        return [-4], {
+            "error_code": -4,
+            "error_message": "Compilation failed",
+        }
 
     method = get_function(compiled_sol, "wrapped_function")
 
     if method is None:
-        return
+        return [-4], {
+            "error_code": -4,
+            "error_message": "wrapped_function not found",
+        }
 
     all_results = []
     total_execution_time = 0
@@ -437,16 +449,19 @@ def run_test(sample, test=None, debug=False, timeout=6):
         in_outs = json.loads(sample["input_output"])
     except ValueError as e:
         raise e
-        in_outs = None
 
-    if in_outs:
-        if in_outs.get("fn_name") is None:
-            which_type = CODE_TYPE.standard_input  # Standard input
-            method_name = None
+    if not in_outs:
+        return [-4], {
+            "error_code": -4,
+            "error_message": "Invalid or empty input_output",
+        }
 
-        else:
-            which_type = CODE_TYPE.call_based  # Call-based
-            method_name = in_outs["fn_name"]
+    if in_outs.get("fn_name") is None:
+        which_type = CODE_TYPE.standard_input  # Standard input
+        method_name = None
+    else:
+        which_type = CODE_TYPE.call_based  # Call-based
+        method_name = in_outs["fn_name"]
 
     if debug:
         print(f"loaded input_output = {datetime.now().time()}")

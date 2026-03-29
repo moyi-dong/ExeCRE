@@ -8,6 +8,10 @@ from dataclasses import dataclass
 
 from datasets import load_dataset
 
+# datasets>=3 resolves configs explicitly; omitting `name` uses "default" and breaks cache lookup
+# for builders keyed as `release_latest-version_tag=...` on the Hub.
+_LCB_CODEGEN_LITE_CONFIG = "release_latest"
+
 
 class Platform(Enum):
     LEETCODE = "leetcode"
@@ -122,7 +126,12 @@ class CodeGenerationProblem:
 
 
 def load_code_generation_dataset(release_version="release_v1", start_date=None, end_date=None) -> list[CodeGenerationProblem]:
-    dataset = load_dataset("livecodebench/code_generation_lite", split="test", version_tag=release_version, trust_remote_code=True)
+    dataset = load_dataset(
+        "livecodebench/code_generation_lite",
+        _LCB_CODEGEN_LITE_CONFIG,
+        split="test",
+        version_tag=release_version,
+    )
     dataset = [CodeGenerationProblem(**p) for p in dataset]  # type: ignore
     if start_date is not None:
         p_start_date = datetime.strptime(start_date, "%Y-%m-%d")
@@ -156,7 +165,12 @@ def load_code_generation_dataset_streaming(release_version="release_v1", start_d
     Yields:
         CodeGenerationProblem instances passing date filters.
     """
-    raw_dataset = load_dataset("livecodebench/code_generation_lite", split="test", version_tag=release_version, trust_remote_code=True)
+    raw_dataset = load_dataset(
+        "livecodebench/code_generation_lite",
+        _LCB_CODEGEN_LITE_CONFIG,
+        split="test",
+        version_tag=release_version,
+    )
 
     p_start_date = None
     p_end_date = None

@@ -182,6 +182,12 @@ def get_args() -> argparse.Namespace:
         default=10,
         help="Number of parallel processes (-1 means using CPU cores)"
     )
+    run_group.add_argument(
+        "--max_rounds",
+        type=int,
+        default=10,
+        help="Max optimization rounds for ExeCRE / Textgrad (overrides JSON when passed with --config)"
+    )
     
     # ==================== Dataset filtering parameters ====================
     dataset_group = parser.add_argument_group("Dataset filtering parameters")
@@ -404,6 +410,12 @@ def get_config_from_args(args: Optional[argparse.Namespace] = None) -> Experimen
         # Only override when --n is explicitly passed (to avoid using the default value to overwrite n in json)
         if '--n' in sys.argv and hasattr(args, 'n'):
             config.experiment.n = args.n
+        if '--test_count' in sys.argv and hasattr(args, 'test_count'):
+            config.experiment.test_count = args.test_count
+        if '--max_rounds' in sys.argv and hasattr(args, 'max_rounds'):
+            config.max_rounds = args.max_rounds
+        if '--multiprocess' in sys.argv and hasattr(args, 'multiprocess'):
+            config.multiprocess = args.multiprocess
         if '--start_from' in sys.argv and hasattr(args, 'start_from'):
             config.start_from = args.start_from
         return config
