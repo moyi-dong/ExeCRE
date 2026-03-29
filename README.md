@@ -29,8 +29,8 @@ Inference backends live under `src/engine/` and are selected by the **`backend-m
 |------------------------|---------|----------------------|
 | `openai-gpt-5.4` | OpenAI-compatible API | `OPENAI_API_KEY` (bare `gpt-*` names are also supported) |
 | `deepseek-deepseek-chat` | DeepSeek | `DEEPSEEK_API_KEY` |
-Example (GPT):
 
+Example (GPT):
 ```bash
 export OPENAI_API_KEY="sk-xxxx"
 python main.py --config configs/e1_execre_deepseek_chat.json
