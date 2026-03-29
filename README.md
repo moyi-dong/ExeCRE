@@ -27,16 +27,12 @@ Inference backends live under `src/engine/` and are selected by the **`backend-m
 
 | Example `model.model` | Backend | Environment variable |
 |------------------------|---------|----------------------|
-| `deepseek-deepseek-chat` | DeepSeek | `DEEPSEEK_API_KEY` |
 | `openai-gpt-5.4` | OpenAI-compatible API | `OPENAI_API_KEY` (bare `gpt-*` names are also supported) |
-| `openrouter-meta-llama/llama-3.1-8b-instruct` | OpenRouter | `OPENROUTER_API_KEY` |
-| `dmx-gpt-5.1` | DMX | `DMX_API_KEY` |
-| `online-qwen-turbo` | Custom OpenAI-style gateway | `ONLINE_API_KEY` (optional `ONLINE_BASE_URL`) |
-
-Example (DeepSeek):
+| `deepseek-deepseek-chat` | DeepSeek | `DEEPSEEK_API_KEY` |
+Example (GPT):
 
 ```bash
-export DEEPSEEK_API_KEY="sk-xxxx"
+export OPENAI_API_KEY="sk-xxxx"
 python main.py --config configs/e1_execre_deepseek_chat.json
 ```
 
