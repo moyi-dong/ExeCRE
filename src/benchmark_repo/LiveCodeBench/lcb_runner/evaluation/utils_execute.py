@@ -23,6 +23,16 @@ import time
 BASE_IMPORTS = "from string import *\nfrom re import *\nfrom datetime import *\nfrom collections import *\nfrom heapq import *\nfrom bisect import *\nfrom copy import *\nfrom math import *\nfrom random import *\nfrom statistics import *\nfrom itertools import *\nfrom functools import *\nfrom operator import *\nfrom io import *\nfrom sys import *\nfrom json import *\nfrom builtins import *\nfrom typing import *\nimport string\nimport re\nimport datetime\nimport collections\nimport heapq\nimport bisect\nimport copy\nimport math\nimport random\nimport statistics\nimport itertools\nimport functools\nimport operator\nimport io\nimport sys\nimport json\nsys.setrecursionlimit(50000)\n"
 
 
+class ModelGeneratedCodeExecutionWarning:
+    """Gate for locally executing model-generated code. See ``__init__``."""
+
+    def __init__(self):
+        raise Exception(
+            "You should remove this and remove the comments, but run at your own risk!!! "
+            "This is going to run model-generated code on your machine."
+        )
+
+
 def check_correctness(code_to_execute, timeout=3):
     """
     Check whether executed code runs without raising.
@@ -34,6 +44,8 @@ def check_correctness(code_to_execute, timeout=3):
     Returns:
         True if exec completes with no exception, else False.
     """
+    ModelGeneratedCodeExecutionWarning()  # Remove this line (and/or the raise in ModelGeneratedCodeExecutionWarning) to run at your own risk.
+
     try:
         exec_globals = {}
         exec_locals = {}
