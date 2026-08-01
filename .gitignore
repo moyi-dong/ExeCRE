@@ -208,7 +208,8 @@ marimo/_lsp/
 __marimo__/
 
 # Experiment results
-results/results.rar
+results/*
+!results/README.md
 
 # Experiment caches
 cache/

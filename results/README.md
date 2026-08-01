@@ -1,10 +1,25 @@
-# `results/` — reading outputs
+# Experimental results
 
 Run from the repository **root**.
 
 ## Experimental data archive
 
-A `results.rar` file may sit **next to this README** (same `results/` directory). It contains the experiment outputs referenced below. **Extract it before** using the paths or commands in this document. The unpacked tree is large (on the order of **~1 GB**), so allow enough disk space.
+Large experimental outputs are not stored in Git. They are archived in the
+[latest Zenodo artifact](https://doi.org/10.5281/zenodo.19347857).
+
+Download and unpack the artifact package. Locate the split result files
+`results.rar.part-00` and `results.rar.part-01`, then reconstruct and extract
+the result archive from the directory containing those files:
+
+```bash
+cat results.rar.part-* > results.rar
+unrar x results.rar
+```
+
+Alternatively, use a graphical archive tool that supports split RAR archives.
+Place the extracted result tree under this repository's `results/` directory
+before running the commands below. The unpacked results require approximately
+1 GB of disk space.
 
 ## Pass@1 on LiveCodeBench (by difficulty) from existing runs
 
