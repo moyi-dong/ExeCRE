@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-message: "If you use ExeCRE, please cite the paper and the archived artifact."
-title: "ExeCRE: Execution-Consistency Guided Reliability Estimation for Self-Correcting Code Generation"
+message: "If you use ExeCRE, please cite the ASE 2026 paper and the exact archived artifact version used."
+title: "ExeCRE"
 type: software
 authors:
   - family-names: Dong
@@ -12,6 +12,36 @@ authors:
   - family-names: Chen
     given-names: Si
 version: 0.1.0
-doi: 10.5281/zenodo.19347857
 repository-code: "https://github.com/moyi-dong/ExeCRE"
 license: MIT
+preferred-citation:
+  type: conference-paper
+  authors:
+    - family-names: Dong
+      given-names: Yiru
+    - family-names: Zhang
+      given-names: Richong
+    - family-names: Kong
+      given-names: Fanshuang
+    - family-names: Chen
+      given-names: Si
+  title: "ExeCRE: Execution-Consistency Guided Reliability Estimation for Self-Correcting Code Generation"
+  collection-title: "Proceedings of the 41st IEEE/ACM International Conference on Automated Software Engineering"
+  collection-type: proceedings
+  doi: "10.1145/3832783.3837445"
+  month: 10
+  year: 2026
+references:
+  - type: data
+    authors:
+      - family-names: Dong
+        given-names: Yiru
+      - family-names: Zhang
+        given-names: Richong
+      - family-names: Kong
+        given-names: Fanshuang
+      - family-names: Chen
+        given-names: Si
+    title: "ExeCRE: Execution-Consistency Guided Reliability Estimation for Self-Correcting Code Generation"
+    doi: "10.5281/zenodo.19347857"
+    year: 2026

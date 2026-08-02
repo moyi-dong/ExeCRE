@@ -3,6 +3,12 @@
 Official implementation of **ExeCRE: Execution-Consistency Guided Reliability
 Estimation for Self-Correcting Code Generation**.
 
+**Accepted at the 41st IEEE/ACM International Conference on Automated
+Software Engineering (ASE 2026).**
+
+- Paper: [https://doi.org/10.1145/3832783.3837445](https://doi.org/10.1145/3832783.3837445)
+- Authors: Yiru Dong, Richong Zhang, Fanshuang Kong, and Si Chen
+
 ExeCRE uses execution consistency to estimate the reliability of generated
 programs and guide iterative self-correction. The repository contains the
 method implementation, experiment configurations, evaluation scripts, and
@@ -10,7 +16,8 @@ analysis utilities used in the paper.
 
 ## Artifact and results
 
-- Latest archived artifact: [Zenodo, DOI 10.5281/zenodo.19347857](https://doi.org/10.5281/zenodo.19347857)
+- All artifact versions: [Zenodo, DOI 10.5281/zenodo.19347857](https://doi.org/10.5281/zenodo.19347857)
+- Current version-specific snapshot (v2): [Zenodo, DOI 10.5281/zenodo.21186258](https://doi.org/10.5281/zenodo.21186258)
 
 GitHub is the development and reuse repository. Zenodo provides the immutable,
 versioned artifact and the large experimental outputs. See
@@ -66,12 +73,36 @@ For the exact naming rules, see `get_engine` in `src/engine/__init__.py`.
 
 ## Citation
 
-Citation metadata is provided in [`CITATION.cff`](CITATION.cff). When reporting
-results reproduced from the paper, use the version-specific Zenodo DOI cited
-by the paper.
+Citation metadata is provided in [`CITATION.cff`](CITATION.cff). If you use
+ExeCRE, please cite the ASE 2026 paper and the exact Zenodo artifact version
+used for reproduced results.
+
+```bibtex
+@inproceedings{dong2026execre,
+  author    = {Dong, Yiru and Zhang, Richong and Kong, Fanshuang and Chen, Si},
+  title     = {ExeCRE: Execution-Consistency Guided Reliability Estimation
+               for Self-Correcting Code Generation},
+  booktitle = {Proceedings of the 41st IEEE/ACM International Conference
+               on Automated Software Engineering},
+  series    = {ASE '26},
+  year      = {2026},
+  month     = {October},
+  location  = {Munich, Germany},
+  publisher = {Association for Computing Machinery},
+  isbn      = {979-8-4007-2882-2},
+  doi       = {10.1145/3832783.3837445},
+  url       = {https://doi.org/10.1145/3832783.3837445}
+}
+```
+
+Page or article-number metadata will be added after the final ACM Digital
+Library citation becomes available.
 
 ## License
 
-Original ExeCRE material is released under the [MIT License](LICENSE).
-Vendored datasets and software retain their original licenses; see
-[`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
+- Original ExeCRE source code: [MIT License](LICENSE)
+- ExeCRE paper: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- ExeCRE experimental data and outputs archived on Zenodo:
+  [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- Vendored datasets and software: their original licenses, as documented in
+  [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)
