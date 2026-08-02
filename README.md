@@ -7,7 +7,6 @@ Estimation for Self-Correcting Code Generation**.
 Software Engineering (ASE 2026).**
 
 - Paper: [https://doi.org/10.1145/3832783.3837445](https://doi.org/10.1145/3832783.3837445)
-- Authors: Yiru Dong, Richong Zhang, Fanshuang Kong, and Si Chen
 
 ExeCRE uses execution consistency to estimate the reliability of generated
 programs and guide iterative self-correction. The repository contains the
@@ -55,8 +54,7 @@ For the exact naming rules, see `get_engine` in `src/engine/__init__.py`.
 
 ## Artifact and results
 
-- All artifact versions: [Zenodo, DOI 10.5281/zenodo.19347857](https://doi.org/10.5281/zenodo.19347857)
-- Camera-ready snapshot (v0.1.0): [Zenodo, DOI 10.5281/zenodo.21737670](https://doi.org/10.5281/zenodo.21737670)
+Artifact at [https://doi.org/10.5281/zenodo.19347857](https://doi.org/10.5281/zenodo.19347857).
 
 GitHub is the development and reuse repository. Zenodo provides the immutable,
 versioned artifact and the large experimental outputs. See
