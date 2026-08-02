@@ -17,7 +17,7 @@ analysis utilities used in the paper.
 ## Artifact and results
 
 - All artifact versions: [Zenodo, DOI 10.5281/zenodo.19347857](https://doi.org/10.5281/zenodo.19347857)
-- Current version-specific snapshot (v2): [Zenodo, DOI 10.5281/zenodo.21186258](https://doi.org/10.5281/zenodo.21186258)
+- Camera-ready snapshot (v0.1.0): [Zenodo, DOI 10.5281/zenodo.21737670](https://doi.org/10.5281/zenodo.21737670)
 
 GitHub is the development and reuse repository. Zenodo provides the immutable,
 versioned artifact and the large experimental outputs. See
