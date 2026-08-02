@@ -14,15 +14,6 @@ programs and guide iterative self-correction. The repository contains the
 method implementation, experiment configurations, evaluation scripts, and
 analysis utilities used in the paper.
 
-## Artifact and results
-
-- All artifact versions: [Zenodo, DOI 10.5281/zenodo.19347857](https://doi.org/10.5281/zenodo.19347857)
-- Camera-ready snapshot (v0.1.0): [Zenodo, DOI 10.5281/zenodo.21737670](https://doi.org/10.5281/zenodo.21737670)
-
-GitHub is the development and reuse repository. Zenodo provides the immutable,
-versioned artifact and the large experimental outputs. See
-[`results/README.md`](results/README.md) for download and analysis instructions.
-
 ## Environment
 
 ```bash
@@ -62,14 +53,14 @@ python main.py --config configs/e1_execre_deepseek_chat.json
 
 For the exact naming rules, see `get_engine` in `src/engine/__init__.py`.
 
-## Repository layout
+## Artifact and results
 
-- `configs/`: experiment configurations
-- `src/baselines/`: ExeCRE and baseline implementations
-- `src/benchmark_repo/`: vendored benchmark code and data
-- `src/evaluators/`: execution-based evaluators
-- `src/analyzers/`: scripts for reproducing reported analyses
-- `results/`: instructions for obtaining and analyzing archived outputs
+- All artifact versions: [Zenodo, DOI 10.5281/zenodo.19347857](https://doi.org/10.5281/zenodo.19347857)
+- Camera-ready snapshot (v0.1.0): [Zenodo, DOI 10.5281/zenodo.21737670](https://doi.org/10.5281/zenodo.21737670)
+
+GitHub is the development and reuse repository. Zenodo provides the immutable,
+versioned artifact and the large experimental outputs. See
+[`results/README.md`](results/README.md) for download and analysis instructions.
 
 ## Citation
 
