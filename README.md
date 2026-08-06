@@ -7,9 +7,6 @@ Estimation for Self-Correcting Code Generation**.
 Software Engineering (ASE 2026, CCF-A).**
 
 - Paper: [arXiv:2608.04439](https://arxiv.org/abs/2608.04439)
-- ACM DOI: [10.1145/3832783.3837445](https://doi.org/10.1145/3832783.3837445)
-  *(Assigned but not yet active; the link will become available when the ASE
-  2026 proceedings are published in the ACM Digital Library.)*
 
 ExeCRE uses execution consistency to estimate the reliability of generated
 programs and guide iterative self-correction. The repository contains the
@@ -81,9 +78,7 @@ used for reproduced results.
   month     = {October},
   location  = {Munich, Germany},
   publisher = {Association for Computing Machinery},
-  isbn      = {979-8-4007-2882-2},
-  doi       = {10.1145/3832783.3837445},
-  url       = {https://doi.org/10.1145/3832783.3837445}
+  isbn      = {979-8-4007-2882-2}
 }
 ```
 
