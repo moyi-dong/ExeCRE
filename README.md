@@ -1,12 +1,8 @@
 # ExeCRE
 
 Official implementation of **ExeCRE: Execution-Consistency Guided Reliability
-Estimation for Self-Correcting Code Generation**.
-
-**Accepted at the 41st IEEE/ACM International Conference on Automated
-Software Engineering (ASE 2026, CCF-A).**
-
-- Paper: [arXiv:2608.04439](https://arxiv.org/abs/2608.04439)
+Estimation for Self-Correcting Code Generation**. **Accepted (ASE 2026, CCF-A).**
+[arXiv:2608.04439](https://arxiv.org/abs/2608.04439)
 
 ExeCRE uses execution consistency to estimate the reliability of generated
 programs and guide iterative self-correction. The repository contains the
